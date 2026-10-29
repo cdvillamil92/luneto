@@ -1,0 +1,31 @@
+# Next.js
+.next/
+out/
+.vercel
+
+# DDEV
+.ddev/
+.dbimageBuild/
+.ddev-docker-compose-base.yaml
+.ddev-docker-compose-full.yaml
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Variables de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.local
+
+# Sistema y Editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,250 @@
+/* ============================================================
+   Luneto — Tema personalizado del admin de Payload
+   Paleta: crema, verde salvia, verde oliva, terracota
+   ============================================================ */
+
+@layer payload-default {
+  :root {
+    /* Escala base — tonos cálidos crema/marfil */
+    --color-base-0: rgb(250, 247, 240);      /* crema */
+    --color-base-50: rgb(245, 240, 230);     /* marfil */
+    --color-base-100: rgb(238, 232, 218);    /* marfil suave */
+    --color-base-150: rgb(228, 220, 202);    /* arena clara */
+    --color-base-200: rgb(216, 206, 184);    /* arena */
+    --color-base-250: rgb(200, 188, 162);    /* arena media */
+    --color-base-300: rgb(180, 168, 142);    /* arena oscura */
+    --color-base-350: rgb(160, 148, 124);
+    --color-base-400: rgb(140, 128, 106);
+    --color-base-450: rgb(120, 110, 92);
+    --color-base-500: rgb(104, 96, 82);
+    --color-base-550: rgb(90, 84, 72);
+    --color-base-600: rgb(78, 72, 62);
+    --color-base-650: rgb(66, 62, 54);
+    --color-base-700: rgb(56, 52, 46);
+    --color-base-750: rgb(46, 43, 38);
+    --color-base-800: rgb(38, 36, 32);       /* charcoal cálido */
+    --color-base-850: rgb(30, 29, 26);
+    --color-base-900: rgb(22, 21, 19);
+    --color-base-950: rgb(14, 13, 12);
+    --color-base-1000: rgb(8, 8, 7);
+
+    /* Acento — verde oliva (botones, enlaces, selección) */
+    --color-accent-50: rgb(240, 246, 238);
+    --color-accent-100: rgb(224, 236, 220);
+    --color-accent-150: rgb(204, 224, 198);
+    --color-accent-200: rgb(182, 210, 174);
+    --color-accent-250: rgb(160, 196, 150);
+    --color-accent-300: rgb(140, 180, 128);
+    --color-accent-350: rgb(120, 164, 108);
+    --color-accent-400: rgb(104, 148, 92);
+    --color-accent-450: rgb(92, 134, 82);
+    --color-accent-500: rgb(88, 129, 87);    /* olive */
+    --color-accent-550: rgb(74, 112, 74);
+    --color-accent-600: rgb(64, 98, 64);
+    --color-accent-650: rgb(58, 90, 64);     /* olive-dark */
+    --color-accent-700: rgb(52, 78, 58);
+    --color-accent-750: rgb(44, 66, 50);
+    --color-accent-800: rgb(38, 56, 44);
+    --color-accent-850: rgb(32, 46, 38);
+    --color-accent-900: rgb(26, 36, 32);
+    --color-accent-950: rgb(20, 28, 25);
+
+    /* Success — verde salvia */
+    --color-success-50: rgb(240, 246, 238);
+    --color-success-100: rgb(224, 236, 220);
+    --color-success-150: rgb(204, 224, 198);
+    --color-success-200: rgb(182, 210, 174);
+    --color-success-250: rgb(160, 196, 150);
+    --color-success-300: rgb(140, 180, 128);
+    --color-success-350: rgb(120, 164, 108);
+    --color-success-400: rgb(104, 148, 92);
+    --color-success-450: rgb(92, 134, 82);
+    --color-success-500: rgb(88, 129, 87);
+    --color-success-550: rgb(74, 112, 74);
+    --color-success-600: rgb(64, 98, 64);
+    --color-success-650: rgb(58, 90, 64);
+    --color-success-700: rgb(52, 78, 58);
+    --color-success-750: rgb(44, 66, 50);
+    --color-success-800: rgb(38, 56, 44);
+    --color-success-850: rgb(32, 46, 38);
+    --color-success-900: rgb(26, 36, 32);
+    --color-success-950: rgb(20, 28, 25);
+
+    /* Warning — terracota */
+    --color-warning-50: rgb(250, 241, 236);
+    --color-warning-100: rgb(248, 229, 219);
+    --color-warning-150: rgb(243, 210, 194);
+    --color-warning-200: rgb(240, 192, 170);
+    --color-warning-250: rgb(236, 172, 144);
+    --color-warning-300: rgb(230, 150, 118);
+    --color-warning-350: rgb(222, 130, 96);
+    --color-warning-400: rgb(214, 112, 78);
+    --color-warning-450: rgb(201, 94, 62);
+    --color-warning-500: rgb(201, 123, 93);  /* terracotta */
+    --color-warning-550: rgb(180, 100, 72);
+    --color-warning-600: rgb(160, 84, 60);
+    --color-warning-650: rgb(140, 72, 52);
+    --color-warning-700: rgb(120, 62, 46);
+    --color-warning-750: rgb(100, 52, 40);
+    --color-warning-800: rgb(82, 44, 34);
+    --color-warning-850: rgb(64, 36, 28);
+    --color-warning-900: rgb(48, 28, 22);
+    --color-warning-950: rgb(34, 20, 16);
+  }
+}
+
+/* Tipografía y detalles */
+@layer payload-default {
+  body {
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Bordes redondeados y suaves */
+  .btn, button, .pill, .nav__link, input, textarea, select {
+    border-radius: 8px;
+  }
+
+  /* Logo del admin */
+  .nav__header {
+    background: var(--theme-elevation-50);
+  }
+}
+
+/* Botones primarios — verde oliva */
+@layer payload-default {
+  .btn--style-primary {
+    --bg-color: var(--color-accent-500) !important;
+    --hover-bg: var(--color-accent-650) !important;
+    --color: #fff !important;
+    --hover-color: #fff !important;
+  }
+
+  /* Enlaces y elementos activos */
+  a {
+    color: var(--color-accent-600);
+  }
+
+  /* Navegación lateral activa */
+  .nav__link--active {
+    background: var(--color-accent-50);
+    color: var(--color-accent-700);
+  }
+}
+
+/* ============================================================
+   Login — compacto, centrado y responsive
+   ============================================================ */
+@layer payload-default {
+  /* Contenedor del login: centrado y con ancho máximo */
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+    padding: 2rem 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Logo */
+  .login__brand {
+    margin-bottom: 1.5rem;
+  }
+  .login__brand img {
+    max-height: 48px;
+    width: auto;
+  }
+
+  /* Formulario */
+  .login__form {
+    width: 100%;
+    max-width: 380px;
+    background: var(--theme-elevation-0);
+    border: 1px solid var(--theme-elevation-150);
+    border-radius: 16px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 8px 30px rgba(58, 90, 64, 0.08);
+  }
+
+  /* Contenedor de inputs */
+  .login__form__inputWrap {
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Campos */
+  .login__form .field-type {
+    margin-bottom: 0.75rem;
+  }
+  .login__form .text-input,
+  .login__form input[type='email'],
+  .login__form input[type='password'],
+  .login__form input[type='text'] {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    border: 1px solid var(--theme-elevation-200);
+    background: var(--theme-elevation-50);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .login__form .text-input:focus,
+  .login__form input:focus {
+    outline: none;
+    border-color: var(--color-accent-500);
+    box-shadow: 0 0 0 3px rgba(88, 129, 87, 0.15);
+  }
+
+  /* Etiquetas */
+  .login__form .field-label,
+  .login__form label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--theme-elevation-700);
+    margin-bottom: 0.35rem;
+  }
+
+  /* Enlace "olvidé contraseña" */
+  .login__form a {
+    font-size: 0.85rem;
+    color: var(--color-accent-600);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.25rem;
+  }
+  .login__form a:hover {
+    text-decoration: underline;
+  }
+
+  /* Botón de login */
+  .login__form .btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 10px;
+    --bg-color: var(--color-accent-500) !important;
+    --hover-bg: var(--color-accent-650) !important;
+    --color: #fff !important;
+    --hover-color: #fff !important;
+  }
+
+  /* Responsive: móvil */
+  @media (max-width: 640px) {
+    .login {
+      padding: 1.5rem 1rem;
+      min-height: calc(100vh - 100px);
+    }
+    .login__form {
+      padding: 1.5rem 1.25rem;
+      border-radius: 14px;
+    }
+    .login__brand img {
+      max-height: 40px;
+    }
+  }
+}
