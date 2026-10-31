@@ -1,57 +1,77 @@
-<<<<<<< HEAD
-/.phpunit.cache
+# =============================================================================
+# LARAVEL CORE & DEPENDENCIES
+# =============================================================================
 /node_modules
+/vendor
 /public/build
 /public/hot
 /public/storage
 /storage/*.key
-/storage/pail
-/vendor
 .env
 .env.backup
 .env.production
-.phpactor.json
+.env.local
+.env.testing
+
+# =============================================================================
+# DATABASES, BACKUPS & COMPRESSED FILES
+# =============================================================================
+# Base de datos y volcados de datos
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+
+# Archivos comprimidos y empaquetados (Backups, logs viejos, etc.)
+*.gz
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.rar
+*.7z
+
+# Directorios comunes de backups en Laravel y DDEV
+/storage/db_backups/
+/.ddev/db-snapshots/
+
+# =============================================================================
+# DDEV DEVELOPMENT ENVIRONMENT
+# =============================================================================
+/.ddev/
+!/.ddev/config.yaml
+!/.ddev/README.md
+
+# =============================================================================
+# LOGS, CACHES & TESTING
+# =============================================================================
+/storage/logs/*
+!/storage/logs/.gitignore
 .phpunit.result.cache
-Homestead.json
-Homestead.yaml
+.phpunit.cache/
+.php-cs-fixer.cache
+chatter.log
 npm-debug.log
 yarn-error.log
-/auth.json
-/.fleet
-/.idea
-/.nova
-/.vscode
-/.zed
-=======
-/vendor/
-node_modules/
-npm-debug.log
-yarn-error.log
+.pnpm-debug.log
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+# =============================================================================
+# IDEs, EDITORS & OS FILES
+# =============================================================================
+# macOS / Windows
+.DS_Store
+Thumbs.db
+Desktop.ini
 
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
-
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
-
-storage/*.key
-.env
-Homestead.yaml
-Homestead.json
-/.vagrant
-.phpunit.result.cache
-/.phpunit.cache
-
-/public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
->>>>>>> 572f620f2639ba637f29d447580956e4fd61b363
+# VS Code / PhpStorm / Sublime
+/.idea/
+/.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.buildpath
+.settings/
